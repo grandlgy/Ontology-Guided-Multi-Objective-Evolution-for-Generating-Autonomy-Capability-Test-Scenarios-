@@ -1,0 +1,440 @@
+[
+  {
+    "name": "Benign",
+    "failure_rate": 0.0,
+    "reasons": {},
+    "runs": [
+      {
+        "success": true,
+        "time": 143.6499999999984,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 144.4499999999986,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 145.14999999999876,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 145.2999999999988,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 147.34999999999926,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 145.14999999999876,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 141.04999999999782,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 143.74999999999844,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 146.249999999999,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 144.19999999999854,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 143.29999999999833,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 146.84999999999914,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 146.199999999999,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 146.249999999999,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 143.5999999999984,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 144.8499999999987,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 141.849999999998,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 143.74999999999844,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 142.84999999999823,
+        "reason": "completed"
+      },
+      {
+        "success": true,
+        "time": 145.99999999999895,
+        "reason": "completed"
+      }
+    ]
+  },
+  {
+    "name": "C1",
+    "failure_rate": 1.0,
+    "reasons": {
+      "collision": 17,
+      "out_of_bounds": 3
+    },
+    "runs": [
+      {
+        "success": false,
+        "time": 5.249999999999989,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 1.1000000000000003,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 9.600000000000001,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 8.449999999999985,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 7.99999999999998,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 10.25000000000001,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 8.399999999999984,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 2.1500000000000004,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 24.600000000000215,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 43.04999999999969,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 21.850000000000176,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 12.450000000000042,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 19.100000000000136,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 22.25000000000018,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 67.5499999999983,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 44.49999999999961,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 35.15000000000014,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 9.299999999999997,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 14.900000000000077,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 52.299999999999166,
+        "reason": "collision"
+      }
+    ]
+  },
+  {
+    "name": "C2",
+    "failure_rate": 1.0,
+    "reasons": {
+      "collision": 13,
+      "out_of_bounds": 7
+    },
+    "runs": [
+      {
+        "success": false,
+        "time": 26.850000000000247,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 0.8500000000000002,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 42.59999999999972,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 6.449999999999985,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 30.300000000000296,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 20.300000000000153,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 4.399999999999992,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 2.25,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 13.250000000000053,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 26.40000000000024,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 14.950000000000077,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 10.90000000000002,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 13.850000000000062,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 11.100000000000023,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 49.699999999999314,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 44.89999999999959,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 37.15000000000003,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 6.299999999999986,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 13.150000000000052,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 53.14999999999912,
+        "reason": "collision"
+      }
+    ]
+  },
+  {
+    "name": "C3",
+    "failure_rate": 1.0,
+    "reasons": {
+      "collision": 14,
+      "out_of_bounds": 5,
+      "battery_exhausted": 1
+    },
+    "runs": [
+      {
+        "success": false,
+        "time": 33.150000000000254,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 1.0500000000000003,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 9.299999999999997,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 7.049999999999983,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 30.800000000000303,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 23.000000000000192,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 4.3499999999999925,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 2.7499999999999982,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 13.400000000000055,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 82.14999999999748,
+        "reason": "battery_exhausted"
+      },
+      {
+        "success": false,
+        "time": 19.35000000000014,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 11.55000000000003,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 18.75000000000013,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 7.199999999999982,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 18.65000000000013,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 43.59999999999966,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 42.099999999999746,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 5.799999999999987,
+        "reason": "out_of_bounds"
+      },
+      {
+        "success": false,
+        "time": 54.34999999999905,
+        "reason": "collision"
+      },
+      {
+        "success": false,
+        "time": 53.549999999999095,
+        "reason": "collision"
+      }
+    ]
+  }
+]

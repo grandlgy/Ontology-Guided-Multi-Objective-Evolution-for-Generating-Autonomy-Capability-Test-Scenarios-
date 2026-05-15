@@ -1,0 +1,9 @@
+{
+  "pearson": 0.3610836344823571,
+  "spearman": 0.3447373427277864,
+  "roc_auc": 0.6708080808080809,
+  "n_validation": 200,
+  "runs_per_scenario": 5,
+  "mean_surrogate": 0.39714446663856506,
+  "mean_sitl": 0.569
+}

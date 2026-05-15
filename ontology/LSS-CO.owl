@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!--
+  LSS-CO: Low-Slow-Small UAV Autonomy Capability Testing Scenario Ontology
+  
+  Skeleton OWL2 DL file accompanying:
+    "A scenario generation method for autonomous capability testing of
+     low-slow-small UAVs based on scenario ontology and multi-objective evolution"
+  
+  This is a structural excerpt for review. The full ontology contains 94 classes
+  and 132 object properties.
+-->
+<rdf:RDF xmlns="http://example.org/lss-co#"
+     xml:base="http://example.org/lss-co"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    
+    <owl:Ontology rdf:about="http://example.org/lss-co">
+        <rdfs:label xml:lang="en">LSS-CO: Low-Slow-Small UAV Capability Ontology</rdfs:label>
+        <owl:versionInfo>0.1-draft</owl:versionInfo>
+    </owl:Ontology>
+    
+    <!-- ============ Root class ============ -->
+    <owl:Class rdf:about="#Scenario">
+        <rdfs:label>Scenario</rdfs:label>
+    </owl:Class>
+    
+    <!-- ============ Subdomain: Environment (E) ============ -->
+    <owl:Class rdf:about="#Environment">
+        <rdfs:subClassOf rdf:resource="#Scenario"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Wind">           <rdfs:subClassOf rdf:resource="#Environment"/></owl:Class>
+    <owl:Class rdf:about="#Visibility">     <rdfs:subClassOf rdf:resource="#Environment"/></owl:Class>
+    <owl:Class rdf:about="#Illumination">   <rdfs:subClassOf rdf:resource="#Environment"/></owl:Class>
+    <owl:Class rdf:about="#Terrain">        <rdfs:subClassOf rdf:resource="#Environment"/></owl:Class>
+    <owl:Class rdf:about="#EMInterference"> <rdfs:subClassOf rdf:resource="#Environment"/></owl:Class>
+    <owl:Class rdf:about="#Precipitation">  <rdfs:subClassOf rdf:resource="#Environment"/></owl:Class>
+    
+    <!-- ============ Subdomain: Target (T) ============ -->
+    <owl:Class rdf:about="#Target">
+        <rdfs:subClassOf rdf:resource="#Scenario"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Platform">         <rdfs:subClassOf rdf:resource="#Target"/></owl:Class>
+    <owl:Class rdf:about="#Rotorcraft">       <rdfs:subClassOf rdf:resource="#Platform"/></owl:Class>
+    <owl:Class rdf:about="#FixedWing">        <rdfs:subClassOf rdf:resource="#Platform"/></owl:Class>
+    <owl:Class rdf:about="#RCS">              <rdfs:subClassOf rdf:resource="#Target"/></owl:Class>
+    <owl:Class rdf:about="#ObstacleDensity">  <rdfs:subClassOf rdf:resource="#Target"/></owl:Class>
+    
+    <!-- ============ Subdomain: Mission (M) ============ -->
+    <owl:Class rdf:about="#Mission">
+        <rdfs:subClassOf rdf:resource="#Scenario"/>
+    </owl:Class>
+    <owl:Class rdf:about="#RoutePatrol">      <rdfs:subClassOf rdf:resource="#Mission"/></owl:Class>
+    <owl:Class rdf:about="#Hover">            <rdfs:subClassOf rdf:resource="#Mission"/></owl:Class>
+    <owl:Class rdf:about="#CooperativeSearch"><rdfs:subClassOf rdf:resource="#Mission"/></owl:Class>
+    <owl:Class rdf:about="#EmergencyAvoid">   <rdfs:subClassOf rdf:resource="#Mission"/></owl:Class>
+    
+    <!-- ============ Subdomain: Disturbance (D) ============ -->
+    <owl:Class rdf:about="#Disturbance">
+        <rdfs:subClassOf rdf:resource="#Scenario"/>
+    </owl:Class>
+    <owl:Class rdf:about="#GPSLoss">       <rdfs:subClassOf rdf:resource="#Disturbance"/></owl:Class>
+    <owl:Class rdf:about="#CommJitter">    <rdfs:subClassOf rdf:resource="#Disturbance"/></owl:Class>
+    <owl:Class rdf:about="#PayloadChange"> <rdfs:subClassOf rdf:resource="#Disturbance"/></owl:Class>
+    <owl:Class rdf:about="#BatteryLevel">  <rdfs:subClassOf rdf:resource="#Disturbance"/></owl:Class>
+    
+    <!-- ============ Subdomain: Capability (C) ============ -->
+    <owl:Class rdf:about="#Capability">
+        <rdfs:subClassOf rdf:resource="#Scenario"/>
+    </owl:Class>
+    <owl:Class rdf:about="#Perception">    <rdfs:subClassOf rdf:resource="#Capability"/></owl:Class>
+    <owl:Class rdf:about="#Planning">      <rdfs:subClassOf rdf:resource="#Capability"/></owl:Class>
+    <owl:Class rdf:about="#Control">       <rdfs:subClassOf rdf:resource="#Capability"/></owl:Class>
+    <owl:Class rdf:about="#Interaction">   <rdfs:subClassOf rdf:resource="#Capability"/></owl:Class>
+    
+    <!-- ============ Object Properties (cross-domain) ============ -->
+    <owl:ObjectProperty rdf:about="#requires">
+        <rdfs:domain rdf:resource="#Mission"/>
+        <rdfs:range rdf:resource="#Capability"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#constrains">
+        <rdfs:domain rdf:resource="#Environment"/>
+        <rdfs:range rdf:resource="#Capability"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="#degrades">
+        <rdfs:domain rdf:resource="#Disturbance"/>
+        <rdfs:range rdf:resource="#Capability"/>
+    </owl:ObjectProperty>
+    
+    <!-- ============ Data Properties (numeric ranges) ============ -->
+    <owl:DatatypeProperty rdf:about="#windSpeed">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#visibilityMeter">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="#missionVelocity">
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+    <!-- ============ Constraints / Disjointness ============ -->
+    <!-- A1: Fixed-wing cannot perform Hover -->
+    <owl:Class rdf:about="#FixedWing">
+        <owl:disjointWith rdf:resource="#Hover"/>
+    </owl:Class>
+    
+    <!--
+      Example SWRL rule (encoded externally):
+        A1: FixedWing(x) ^ Hover(y) ^ assignedTo(x,y) -> false
+        A2: FixedWing(x) ^ missionVelocity(x,?v) ^ swrlb:lessThan(?v, 5.0) -> false
+        A3: Night(x) ^ visibilityMeter(x,?v) ^ swrlb:greaterThan(?v, 2000) -> false
+        A4: Precipitation(x,?p) ^ Wind(x,?w) ^ swrlb:greaterThan(?p,5) ^ 
+            swrlb:lessThan(?w,3) -> false
+        A5: EMInterference(x,?e) ^ GPSLoss(x,?g) ^ swrlb:greaterThan(?e,0.8) ^
+            swrlb:lessThan(?g,0.3) -> false
+    -->
+    
+</rdf:RDF>
